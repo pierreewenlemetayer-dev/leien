@@ -16,216 +16,62 @@
     --bordure: #e4cfd6;
     --ombre: 0 8px 25px rgba(100, 45, 65, 0.08);
   }
-
   * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--fond);
-    color: var(--texte);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    line-height: 1.5;
-  }
-
-  .page { max-width: 1450px; margin: 0 auto; padding: 0 24px 30px; }
-
-  header { text-align: center; padding: 42px 20px 28px; margin-bottom: 8px; }
-
-  h1 {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3rem, 7vw, 5rem);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    color: var(--texte);
-  }
-
-  .subtitle {
-    margin-top: 12px;
-    color: var(--secondaire);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-style: italic;
-  }
-
-  .selector {
-    margin: 0 auto 22px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .selector label { font-weight: 600; }
-
-  select {
-    font: inherit;
-    min-width: 260px;
-    padding: 10px 13px;
-    border: 1px solid var(--bordure);
-    border-radius: 10px;
-    background: var(--papier);
-    color: var(--texte);
-    cursor: pointer;
-  }
-
-  .work-area {
-    display: grid;
-    grid-template-columns: minmax(0, 4fr) minmax(220px, 1fr);
-    gap: 20px;
-    align-items: start;
-  }
-
-  .structure, .toolbox {
-    background: var(--papier);
-    border: 1px solid var(--bordure);
-    border-radius: 18px;
-    box-shadow: var(--ombre);
-  }
-
-  .structure { overflow: hidden; }
-
-  .step {
-    display: grid;
-    grid-template-columns: minmax(185px, 27%) minmax(0, 73%);
-    min-height: 145px;
-    border-bottom: 1px solid var(--bordure);
-  }
-
-  .step:last-child { border-bottom: 0; }
-
-  .step-info {
-    padding: 13px 15px;
-    border-right: 1px solid var(--bordure);
-    background: #fff9fb;
-  }
-
-  .step-number {
-    color: var(--accent-fonce);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .step-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 3px 0 9px;
-  }
-
-  .step-desc { font-size: 11px; line-height: 1.4; }
-
-  .writing { position: relative; padding: 10px; }
-
-  textarea {
-    width: 100%;
-    height: 100%;
-    min-height: 122px;
-    resize: none;
-    overflow: hidden;
-    border: 1px solid var(--bordure);
-    border-radius: 10px;
-    padding: 10px 10px 24px;
-    font: 11.5px/1.35 Verdana, Geneva, sans-serif;
-    color: var(--texte);
-    background: #fff;
-    outline: none;
-  }
-
-  textarea:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-pale);
-  }
-
-  .counter {
-    position: absolute;
-    right: 18px;
-    bottom: 17px;
-    font-size: 9px;
-    color: var(--secondaire);
-    pointer-events: none;
-    background: white;
-    padding-left: 3px;
-  }
-
-  .toolbox { padding: 18px; position: sticky; top: 12px; }
-
-  .toolbox h2 {
-    margin: 0 0 14px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.2rem;
-  }
-
-  .tool { padding: 12px 0; border-top: 1px solid var(--bordure); }
-  .tool:first-of-type { border-top: 0; }
-  .tool-name { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
-  .idea { min-height: 18px; font-size: 11px; line-height: 1.4; margin-bottom: 7px; }
-
-  button {
-    font: inherit;
-    font-size: 11px;
-    padding: 7px 10px;
-    border: 1px solid var(--accent);
-    border-radius: 9px;
-    background: var(--accent);
-    color: white;
-    cursor: pointer;
-    transition: 0.18s ease;
-  }
-
-  button:hover { background: var(--accent-fonce); border-color: var(--accent-fonce); }
-
-  .full-draw { width: 100%; margin-top: 12px; padding: 9px; }
-
-  .actions { margin: 20px 0; display: flex; justify-content: center; }
-
-  .print-btn { font-size: 12px; padding: 10px 15px; }
-
-  footer { text-align: center; font-size: 0.8rem; color: var(--secondaire); margin-top: 14px; }
-
-  @media (max-width: 700px) {
-    .page { padding: 0 12px 25px; }
-    header { padding-top: 32px; }
-    .work-area { grid-template-columns: 1fr; }
-    .toolbox { position: static; }
-    .step { grid-template-columns: minmax(130px, 32%) minmax(0, 68%); }
-    .step-info { padding: 11px; }
-  }
-
+  body { margin:0; background:var(--fond); color:var(--texte); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; line-height:1.5; }
+  .page { max-width:1450px; margin:0 auto; padding:0 24px 30px; }
+  header { text-align:center; padding:42px 20px 28px; margin-bottom:8px; }
+  h1 { margin:0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(3rem,7vw,5rem); font-weight:700; letter-spacing:-0.04em; line-height:1; color:var(--texte); }
+  .subtitle { margin-top:12px; color:var(--secondaire); font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.1rem,2.5vw,1.4rem); font-style:italic; }
+  .selector { margin:0 auto 22px; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px; }
+  .selector label { font-weight:600; }
+  select { font:inherit; min-width:260px; padding:10px 13px; border:1px solid var(--bordure); border-radius:10px; background:var(--papier); color:var(--texte); cursor:pointer; }
+  .work-area { display:grid; grid-template-columns:minmax(0,4fr) minmax(220px,1fr); gap:20px; align-items:start; }
+  .structure,.toolbox { background:var(--papier); border:1px solid var(--bordure); border-radius:18px; box-shadow:var(--ombre); }
+  .structure { overflow:hidden; }
+  .step { display:grid; grid-template-columns:minmax(185px,27%) minmax(0,73%); min-height:145px; border-bottom:1px solid var(--bordure); }
+  .step:last-child { border-bottom:0; }
+  .step-info { padding:13px 15px; border-right:1px solid var(--bordure); background:#fff9fb; }
+  .step-number { color:var(--accent-fonce); font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+  .step-title { font-family:Georgia,"Times New Roman",serif; font-size:1.05rem; font-weight:700; margin:3px 0 9px; }
+  .step-desc { font-size:11px; line-height:1.4; }
+  .writing { position:relative; padding:10px; }
+  textarea { width:100%; height:100%; min-height:122px; resize:none; overflow:hidden; border:1px solid var(--bordure); border-radius:10px; padding:10px 10px 24px; font:11.5px/1.35 Verdana,Geneva,sans-serif; color:var(--texte); background:#fff; outline:none; }
+  textarea:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-pale); }
+  .counter { position:absolute; right:18px; bottom:17px; font-size:9px; color:var(--secondaire); pointer-events:none; background:white; padding-left:3px; }
+  .toolbox { padding:18px; position:sticky; top:12px; }
+  .toolbox h2 { margin:0 0 14px; font-family:Georgia,"Times New Roman",serif; font-size:1.2rem; }
+  .tool { padding:12px 0; border-top:1px solid var(--bordure); }
+  .tool:first-of-type { border-top:0; }
+  .tool-name { font-size:13px; font-weight:700; margin-bottom:6px; }
+  .idea { min-height:18px; font-size:11px; line-height:1.4; margin-bottom:7px; }
+  button { font:inherit; font-size:11px; padding:7px 10px; border:1px solid var(--accent); border-radius:9px; background:var(--accent); color:white; cursor:pointer; transition:.18s ease; }
+  button:hover { background:var(--accent-fonce); border-color:var(--accent-fonce); }
+  .full-draw { width:100%; margin-top:12px; padding:9px; }
+  .actions { margin:20px 0; display:flex; justify-content:center; }
+  .print-btn { font-size:12px; padding:10px 15px; }
+  footer { text-align:center; font-size:.8rem; color:var(--secondaire); margin-top:14px; }
+  @media (max-width:700px) { .page{padding:0 12px 25px;} header{padding-top:32px;} .work-area{grid-template-columns:1fr;} .toolbox{position:static;} .step{grid-template-columns:minmax(130px,32%) minmax(0,68%);} .step-info{padding:11px;} }
   @media print {
-    @page { size: A4 landscape; margin: 10mm; }
-    body { background: white; color: #222; }
-    .page { max-width: none; padding: 0; }
-    header { margin-bottom: 5mm; padding: 0; }
-    h1 { display: none; }
-    .subtitle { font-size: 0; }
-    .subtitle::after { content: "Mon histoire"; font-size: 10pt; }
-    header { margin-bottom: 1mm; }
-    .selector, .toolbox, .actions { display: none; }
-    .work-area { display: block; }
-    .structure { border: 1px solid #888; border-radius: 0; box-shadow: none; }
-    .step { min-height: 0; height: 29mm; grid-template-columns: 27% 73%; }
-    .step-info { padding: 2.5mm 3mm; background: white; }
-    .step-number { font-size: 7pt; }
-    .step-title { font-size: 9pt; margin: 1px 0 2px; }
-    .step-desc { font-size: 6.5pt; line-height: 1.25; }
-    .writing { padding: 2mm; }
-    textarea {
-      min-height: 0;
-      height: 24mm;
-      font-size: 7.5pt;
-      line-height: 1.25;
-      padding: 2mm 2.5mm 5mm;
-      border-color: #999;
-      border-radius: 0;
-      box-shadow: none;
-    }
-    .counter { font-size: 6.5pt; right: 3.5mm; bottom: 3.5mm; }
-    footer { margin-top: 2mm; font-size: 7pt; }
+    @page { size:A4 landscape; margin:10mm; }
+    body { background:white; color:#222; }
+    .page { max-width:none; padding:0; }
+    header { margin-bottom:5mm; padding:0; }
+    h1 { display:none; }
+    .subtitle { font-size:0; }
+    .subtitle::after { content:"Mon histoire"; font-size:10pt; }
+    header { margin-bottom:1mm; }
+    .selector,.toolbox,.actions { display:none; }
+    .work-area { display:block; }
+    .structure { border:1px solid #888; border-radius:0; box-shadow:none; }
+    .step { min-height:0; height:29mm; grid-template-columns:27% 73%; }
+    .step-info { padding:2.5mm 3mm; background:white; }
+    .step-number { font-size:7pt; }
+    .step-title { font-size:9pt; margin:1px 0 2px; }
+    .step-desc { font-size:6.5pt; line-height:1.25; }
+    .writing { padding:2mm; }
+    textarea { min-height:0; height:24mm; font-size:7.5pt; line-height:1.25; padding:2mm 2.5mm 5mm; border-color:#999; border-radius:0; box-shadow:none; }
+    .counter { font-size:6.5pt; right:3.5mm; bottom:3.5mm; }
+    footer { margin-top:2mm; font-size:7pt; }
   }
 </style>
 </head>
@@ -262,26 +108,69 @@ catastrophe:[
 ["L’Issue","","La catastrophe arrive à son terme. Le personnage arrive à s'en sortir in extremis, ou pas."]],
 dilemme:[
 ["Le Cadre","Où ? Quand ? Qui ? Descriptions.","Installer le lieu, le moment, les personnages et les éléments importants du décor."],
-["L’Ancrage","","Une petite scène qui illustre l'attachement du personnage à deux choses (lieux, personnes, passions, ambitions...)."],
+["L’Ancrage","", "Une petite scène qui illustre l'attachement du personnage à deux choses (lieux, personnes, passions, ambitions...)."],
 ["Le Dilemme","","Le personnage doit choisir entre deux possibilités incompatibles. Chacune a des avantages, mais aussi un coût ou un risque."],
 ["L’Hésitation","","Le personnage hésite, cherche une solution pour éviter de choisir ou tente de concilier les deux possibilités."],
 ["La Décision","","Le personnage fait son choix et accepte le coût ou le risque qui l'accompagne."],
 ["Les Conséquences","","Le choix du personnage produit des conséquences et une nouvelle situation s'installe."]]};
+
 const toolbox={
-"👤 Personnage":["courageux / peureux","curieux","méfiant","naïf","orgueilleux","impulsif","solitaire","généreux","ambitieux","indécis","peur → courage","égoïsme → altruisme","solitude → confiance","naïveté → lucidité","arrogance → humilité","indécision → capacité de choisir","besoin de reconnaissance → confiance en soi","refus du changement → acceptation"],
+"👤 Personnage":[
+"la bonne amie toujours fidèle",
+"l’ami jaloux",
+"l’ami·e qui cache quelque chose",
+"le rival ou la rivale",
+"le personnage qui veut toujours avoir raison",
+"le personnage qui se croit plus malin que les autres",
+"le personnage qui aide sans rien demander en retour",
+"le personnage qui n’ose jamais dire ce qu’il pense",
+"le personnage qui veut impressionner les autres",
+"le personnage qui préfère agir seul",
+"le personnage qui entraîne les autres dans ses idées",
+"le personnage qui doute toujours de lui-même / d’elle-même",
+"le personnage qui ne fait confiance à personne",
+"le personnage qui croit facilement ce qu’on lui raconte",
+"le personnage qui observe tout mais parle peu",
+"le personnage qui pose toujours trop de questions",
+"le personnage qui arrive toujours au mauvais moment",
+"le personnage qui connaît un secret important",
+"le personnage qui sait quelque chose que les autres ignorent",
+"le personnage qui doit quelque chose au personnage principal",
+"le personnage qui veut se venger",
+"le personnage qui cherche à se faire pardonner",
+"le personnage qui protège le personnage principal",
+"le personnage que tout le monde sous-estime",
+"le personnage dont on découvre progressivement la vraie personnalité",
+"deux ami·es qui deviennent rival·es",
+"deux rival·es qui doivent s’entraider",
+"deux personnages qui se détestent mais se ressemblent",
+"deux personnages qui ne se comprennent pas",
+"un personnage qui admire un autre personnage",
+"un personnage qui jalouse un autre personnage",
+"un personnage qui cherche à dépasser un autre personnage",
+"un personnage qui veut protéger quelqu’un qui ne veut pas l’être",
+"un personnage qui doit faire équipe avec quelqu’un qu’il ou elle déteste",
+"un personnage qui découvre qu’il ou elle s’était trompé·e sur quelqu’un",
+"une personne peureuse devient courageuse",
+"une personne égoïste devient altruiste",
+"une personne solitaire se fait des amis",
+"une personne naïve devient lucide",
+"une personne naïve se fait avoir",
+"une personne arrogante apprend l’humilité",
+"une personne indécise prend confiance en elle",
+"la peur du changement devient acceptation",
+"une personne orgueilleuse devient sage",
+"une personne impulsive regrette sa colère",
+"une personne méfiante apprend à faire confiance",
+"une personne curieuse se voit récompensée"
+],
 "🎯 Enjeu":["une recherche","une enquête","une rivalité","une vengeance","une fuite","une poursuite","une mission","une compétition","une histoire d’amour contrariée","une quête","une survie","une personne à protéger","une faute à réparer","un secret à découvrir","une volonté de prouver sa valeur","une volonté de se libérer","une ascension sociale ou personnelle","un voyage dont le but se révèle progressivement"],
 "⚡ Déclencheur":["une rencontre inattendue","une disparition","une mort","une perte","une trahison","une découverte","une lettre ou un message","un objet trouvé","un secret découvert","une accusation","un vol","une menace","une catastrophe","une erreur","un accident","une interdiction","une invitation","une proposition","une mission confiée au personnage","le retour d’une personne","l’arrivée dans un lieu inconnu","une intrusion du surnaturel"],
 "🧩 Ingrédients":["un secret de famille","une rivalité entre frères, sœurs ou amis","une amitié improbable","un mentor","un amour interdit","un conflit entre générations","un héritage","un objet mystérieux","un objet précieux","une maison mystérieuse","un lieu interdit","une carte","un journal intime","de vieilles lettres","une société secrète","une conspiration"],
 "🌍 Univers":["voyage","monde inconnu","île isolée","survie","surnaturel","voyage dans le temps","monde dystopique","monde futuriste","monde parallèle","guerre","catastrophe naturelle","époque historique","petite ville","grande ville","milieu rural","espace clos / huis clos"]};
+
 let notes=Array(6).fill("");
-function renderStructure(key){
-const box=document.getElementById("structureBox"),data=structures[key]; box.innerHTML="";
-for(let i=0;i<6;i++){const step=document.createElement("div");step.className="step";const info=document.createElement("div");info.className="step-info";
-if(!data) info.innerHTML='<div class="step-number">'+(i+1)+'</div>';
-else info.innerHTML='<div class="step-number">'+(i+1)+'</div><div class="step-title">'+data[i][0]+'</div>'+(data[i][1]?'<div class="step-desc"><strong>'+data[i][1]+'</strong></div>':"")+'<div class="step-desc">'+data[i][2]+'</div>';
-const writing=document.createElement("div");writing.className="writing";const ta=document.createElement("textarea");ta.maxLength=400;ta.value=notes[i];ta.setAttribute("aria-label","Notes étape "+(i+1));const counter=document.createElement("div");counter.className="counter";
-const update=()=>{notes[i]=ta.value;counter.textContent=ta.value.length+" / 400";};ta.addEventListener("input",update);update();writing.appendChild(ta);writing.appendChild(counter);step.appendChild(info);step.appendChild(writing);box.appendChild(step);}
-}
+function renderStructure(key){const box=document.getElementById("structureBox"),data=structures[key];box.innerHTML="";for(let i=0;i<6;i++){const step=document.createElement("div");step.className="step";const info=document.createElement("div");info.className="step-info";if(!data) info.innerHTML='<div class="step-number">'+(i+1)+'</div>';else info.innerHTML='<div class="step-number">'+(i+1)+'</div><div class="step-title">'+data[i][0]+'</div>'+(data[i][1]?'<div class="step-desc"><strong>'+data[i][1]+'</strong></div>':"")+'<div class="step-desc">'+data[i][2]+'</div>';const writing=document.createElement("div");writing.className="writing";const ta=document.createElement("textarea");ta.maxLength=400;ta.value=notes[i];ta.setAttribute("aria-label","Notes étape "+(i+1));const counter=document.createElement("div");counter.className="counter";const update=()=>{notes[i]=ta.value;counter.textContent=ta.value.length+" / 400";};ta.addEventListener("input",update);update();writing.appendChild(ta);writing.appendChild(counter);step.appendChild(info);step.appendChild(writing);box.appendChild(step);}}
 function makeTools(){const root=document.getElementById("tools");root.innerHTML="";Object.entries(toolbox).forEach(([name,ideas])=>{const tool=document.createElement("div");tool.className="tool";const nameEl=document.createElement("div");nameEl.className="tool-name";nameEl.textContent=name;const idea=document.createElement("div");idea.className="idea";const btn=document.createElement("button");btn.textContent="🎲 Une idée";btn.addEventListener("click",()=>{idea.textContent=ideas[Math.floor(Math.random()*ideas.length)];btn.textContent="↻ Autre idée";});tool.appendChild(nameEl);tool.appendChild(idea);tool.appendChild(btn);root.appendChild(tool);});}
 document.getElementById("structure").addEventListener("change",e=>{const key=e.target.value;const hasNotes=notes.some(n=>n.length>0);if(hasNotes&&key){if(!confirm("Changer de structure ?\n\nVos notes actuelles seront effacées.")){e.target.value="";return;}notes=Array(6).fill("");}renderStructure(key);});
 document.getElementById("printBtn").addEventListener("click",()=>window.print());
