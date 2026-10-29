@@ -29,10 +29,10 @@
   @media(max-width:700px){.page{padding:0 12px 25px}header{padding-top:32px}.work-area{grid-template-columns:1fr}.toolbox{position:static}.step{grid-template-columns:minmax(130px,32%) minmax(0,68%)}.step-info{padding:11px}.site-links{flex-direction:column;width:100%;max-width:320px}.site-link{width:100%;text-align:center}}
   @media print{@page{size:A4 landscape;margin:10mm}body{background:white;color:#222}.page{max-width:none;padding:0}header{margin-bottom:5mm;padding:0}h1{display:none}.subtitle{font-size:0}.subtitle::after{content:"Mon histoire";font-size:10pt}header{margin-bottom:1mm}.selector,.toolbox,.actions{display:none}.work-area{display:block}.structure{border:1px solid #888;border-radius:0;box-shadow:none}.step{min-height:0;height:29mm;grid-template-columns:27% 73%}.step-info{padding:2.5mm 3mm;background:white}.step-number{font-size:7pt}.step-title{font-size:9pt;margin:1px 0 2px}.step-desc{font-size:6.5pt;line-height:1.25}.writing{padding:2mm}textarea{min-height:0;height:24mm;font-size:7.5pt;line-height:1.25;padding:2mm 2.5mm 5mm;border-color:#999;border-radius:0;box-shadow:none}.counter{font-size:6.5pt;right:3.5mm;bottom:3.5mm}footer{margin-top:2mm;font-size:7pt}}
 </style>
-</head>
+<style id="home-title-style">h1 .home-title-link{color:inherit;font:inherit;letter-spacing:inherit;text-decoration:none;cursor:pointer}h1 .home-title-link:hover,h1 .home-title-link:visited,h1 .home-title-link:active{color:inherit;text-decoration:none}h1 .home-title-link:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}</style></head>
 <body>
 <div class="page">
-<header><h1>Leien</h1><div class="subtitle">Construire des histoires</div></header>
+<header><h1><a class="home-title-link" href="./" aria-label="Revenir à l’accueil">Leien</a></h1><div class="subtitle">Construire des histoires</div></header>
 <div class="selector"><label for="structure">Choisir une structure de récit</label><select id="structure">
 <option value="">Structure libre</option><option value="obstacle">L’Obstacle</option><option value="mystere">Le Mystère</option><option value="catastrophe">La Catastrophe</option><option value="dilemme">Le Dilemme</option>
 </select></div>
@@ -58,6 +58,6 @@ document.getElementById("printBtn").addEventListener("click",()=>window.print())
 document.getElementById("fullDraw").addEventListener("click",()=>document.querySelectorAll(".tool").forEach(tool=>tool.querySelector("button").click()));
 renderStructure("");makeTools();
 </script>
-</body>
+<script id="home-title-script">(function(){const link=document.querySelector('h1 .home-title-link');if(!link)return;function active(){if(typeof window.__homeActivityActive==='function')return window.__homeActivityActive();return [...document.querySelectorAll('#structureBox textarea')].some(x=>x.value.trim());}link.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.stopImmediatePropagation();if(e.key===' '){e.preventDefault();link.click()}}},true);link.addEventListener('click',e=>{if(active()&&!confirm('Une activité est en cours. Revenir à l’accueil et abandonner la progression ?'))e.preventDefault()});})();</script></body>
 </html>
 <!-- Déclenchement d'une nouvelle publication GitHub Pages -->
